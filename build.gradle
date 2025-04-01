@@ -20,6 +20,7 @@ dependencies {
   implementation 'org.sensorhub:sensorhub-service-sweapi:' + oshCoreVersion
   implementation project(':sensorhub-driver-template')
 
+  implementation project(':sensorhub-service-sensorthings')
 //  implementation project(':[storage-module-name]')
 //  implementation project(':[service-name]')
 //  implementation project(':[driver-name]')

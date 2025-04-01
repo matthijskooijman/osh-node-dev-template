@@ -4,6 +4,7 @@ def sensorDir = "$includeDir/osh-addons/sensors"
 def persistenceDir = "$includeDir/osh-addons/persistence"
 def processDir = "$includeDir/osh-addons/processing"
 def serviceDir = "$includeDir/osh-addons/services"
+def commDir = "$includeDir/osh-addons/comm"
 
 def toolsDir = "$rootDir/tools"
 
@@ -69,3 +70,9 @@ processProjects.files.each { File f ->
         project(projectName).projectDir = projectFolder
     }
 }
+
+include 'sensorhub-service-sensorthings'
+project(':sensorhub-service-sensorthings').projectDir = "$serviceDir/sensorhub-service-sensorthings" as File
+
+include 'sensorhub-comm-mqtt'
+project(':sensorhub-comm-mqtt').projectDir = "$commDir/sensorhub-comm-mqtt" as File
